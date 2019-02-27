@@ -1,0 +1,21 @@
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+//Breakpoints
+
+@mixin tablet {
+	@media (min-width: $tablet-width) {
+	  @content;
+	}
+   }
+   
+   // Mixin for desktop breakpoint
+   @mixin desktop {
+	@media (min-width: $desktop-width) {
+	  @content;
+	}
+   }
