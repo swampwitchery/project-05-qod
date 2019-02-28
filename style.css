@@ -455,7 +455,7 @@ a {
   float: left;
   width: 100%; }
   .main-navigation ul {
-    display: none;
+    padding: 1rem;
     list-style: none;
     margin: 0;
     padding-left: 0; }
@@ -480,7 +480,8 @@ a {
       left: auto; }
   .main-navigation li {
     float: left;
-    position: relative; }
+    position: relative;
+    border-right: 1px solid #fff; }
   .main-navigation a {
     display: block;
     text-decoration: none; }
