@@ -11,7 +11,9 @@
              xhr.setRequestHeader( 'X-WP-Nonce', qod_vars.wpapi_nonce );
           }
        }).done( function(response) {
-        $('.entry-content').html(response[0].content.rendered)
+        $('.entry-content').html(response[0].content.rendered);
+        $('.author-title').html(response[0].title.rendered);
+        $('.entry-source').html(response[0]._qod_quote_source.rendered);
        });
     });
  })( jQuery );

@@ -13,7 +13,15 @@
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-content -->
 
-	<header class="entry-header">
+	<div class="author-title">
 		- <?php the_title(); ?>
+	</div>
+
+	<div class="entry-title">
+		
+	</div>
+
+	<header class="entry-header">
+
 	</header><!-- .entry-header -->
 </article><!-- #post-## -->
