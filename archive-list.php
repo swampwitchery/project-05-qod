@@ -31,7 +31,9 @@ get_header(); ?>
             <div class="categories-area">
                 <h2>Categories</h2>
                 <ul>
-
+               <?php wp_list_categories(array(
+                   'title_li'    => '',
+               )); ?>
                 </ul>
             </div>
 
