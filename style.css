@@ -408,27 +408,31 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-  color: #666;
-  border: 1px solid #ccc;
-  border-radius: 3px; }
+  background-color: #222;
+  border: 2px solid #0c0;
+  border-radius: 3px;
+  color: #fff; }
   input[type="text"]:focus,
   input[type="email"]:focus,
   input[type="url"]:focus,
   input[type="password"]:focus,
   input[type="search"]:focus,
   textarea:focus {
-    color: #111; }
+    color: #fff;
+    border-color: #fff; }
 
 input[type="text"],
 input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"] {
-  padding: 3px; }
+  padding: 1px;
+  margin: 1rem 0 1rem;
+  width: 25%; }
 
 textarea {
   padding-left: 3px;
-  width: 100%; }
+  width: 50%; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -450,8 +454,7 @@ a {
   display: block;
   float: left;
   width: 100%;
-  margin: 4rem 0 3rem;
-  padding: 1rem; }
+  margin: 3.5rem 0 3rem; }
   .main-navigation ul {
     padding: 1rem;
     list-style: none;
@@ -479,10 +482,13 @@ a {
   .main-navigation li {
     float: left;
     position: relative;
-    border-right: 1px solid #fff; }
+    border-right: 1px solid #fff;
+    padding: 0 1rem; }
   .main-navigation a {
     display: block;
     text-decoration: none; }
+  .main-navigation .page-item-206 {
+    padding-left: 0; }
 
 /* Small menu. */
 .menu-toggle,
@@ -513,6 +519,16 @@ a {
   float: right;
   text-align: right;
   width: 50%; }
+
+.site-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.site-branding {
+  margin: 2rem 0; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -601,11 +617,23 @@ a {
 .author-title {
   font-size: 1.25rem; }
 
+.type-post {
+  margin-bottom: 2.5rem; }
+
 body {
   background-color: #222222;
   color: #fff;
   font-family: Exo Web, sans-serif;
   font-size: 16px; }
+
+.admin-bar {
+  padding: 1rem; }
+
+.logo-image {
+  width: 300px; }
+
+.site-main i {
+  display: none; }
 
 /*--------------------------------------------------------------
 # Media

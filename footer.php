@@ -11,11 +11,10 @@
 
 			<footer id="colophon" class="site-footer" role="contentinfo">
 				<div class="site-info">
-				</div><!-- .site-info -->
-				
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?> <p>Brought to you by ...</p>
-				</nav><!-- #site-navigation -->
+					<nav id="site-navigation" class="main-navigation" role="navigation">
+						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?> <p>Brought to you by ...</p>
+					</nav><!-- #site-navigation -->
+				</div><!-- .site-info -->	
 			</footer><!-- #colophon -->
 		</div><!-- #page -->
 

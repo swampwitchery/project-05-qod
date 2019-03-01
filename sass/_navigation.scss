@@ -29,8 +29,8 @@ a {
 	display: block;
 	float: left;
 	width: 100%;
-	margin: 4rem 0 3rem;
-	padding: 1rem;
+	margin: 3.5rem 0 3rem;
+
 
 	ul {
 		padding: 1rem;
@@ -80,6 +80,8 @@ a {
 		float: left;
 		position: relative;
 		border-right: 1px solid #fff;
+		padding: 0 1rem;
+		
 
 		&:hover > a,
 		&.focus > a {
@@ -93,6 +95,10 @@ a {
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a {
+	}
+
+	.page-item-206{
+		padding-left: 0;
 	}
 }
 
@@ -131,3 +137,15 @@ a {
 		width: 50%;
 	}
 }
+
+
+
+.site-info{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.site-branding{
+	margin: 2rem 0;
+}
+

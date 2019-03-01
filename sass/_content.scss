@@ -37,11 +37,29 @@
 	font-size: 1.25rem;
 }
 
+.type-post {
+	margin-bottom: 2.5rem;
+}
+
 body{
 	background-color: #222222;
 	color: #fff;
 	font-family: $font__main;
 	font-size: 16px;
+}
+
+.admin-bar{
+	padding: 1rem;
+}
+
+.logo-image{
+	width: 300px;
+}
+
+.site-main{
+	i{
+		display: none;
+	}
 }
 
 

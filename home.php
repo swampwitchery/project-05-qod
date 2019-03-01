@@ -11,25 +11,27 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
-
+		<i class="fas fa-quote-left"></i>
 			<?php if ( is_home() && ! is_front_page() ) : ?>
 				<header class="single-post-title">
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 				</header>
+				<i class="fas fa-quote-right"></i>
 			<?php endif; ?>
 
-			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'template-parts/content' ); ?>
 
 			<?php endwhile; ?>
 
+
 		<?php else : ?>
 
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 		<?php endif; ?>
+
 
 		<button type="button" id="show-another">Show Me Another!</button>
 

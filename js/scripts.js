@@ -30,6 +30,29 @@
         history.pushState(null, null, url);
        });
     });
+
+    $('#submit-form').on('submit', function(event) {
+      event.preventDefault();
+      const quotes = {
+         title: $('#author-quote').val(),
+         content: $('#your-quote').val(),
+         _qod_quote_source: $('#find-quote').val(),
+         _qod_quote_source_url: $('#quote-source').val(),
+      };
+      
+      $.ajax({
+         method: 'post',
+         url: qod_vars.rest_url + 'wp/v2/posts/',
+         data: quotes,
+         beforeSend: function(xhr) {
+            xhr.setRequestHeader( 'X-WP-Nonce', qod_vars.wpapi_nonce );
+         }
+      }).done( function() {
+         $('#submit-area').html(qod_vars.success)
+      }).fail( function() {
+         $('#submit-area').html(qod_vars.failure)
+      });
+   });
  })( jQuery );
 
  

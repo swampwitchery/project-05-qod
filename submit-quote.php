@@ -12,20 +12,30 @@ get_header(); ?>
             
 			<header class="page-header">
 				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
+					the_title( '<h1 class="page-title">', '</h1>' );
 				?>
 			</header><!-- .page-header -->
 
             <div id="submit-area">
-                <form action="" method="post">
-                    <label for="quote-author">Author of Quote</label>
-                    <input type="text" name="author-quote" id="author" required>
-                    <label for="message">Quote</label>
-                    <textarea name="message" id="your-quote"></textarea>
-                    <input type="submit" value="Send My Message">
-                    <label for="from-where">Where did you find this quote? (e.g. book name)</label>
-                    <input type="text" name="email" id="email" required>
+                <form id="submit-form">
+                    <label>Author of Quote</label>
+                    <br>
+                    <input type="text" name="author-quote" id="author-quote" required>
+                    <br>
+                    <label>Quote</label>
+                    <br>
+                    <textarea name="message" id="your-quote" required></textarea>
+                    <br>
+                    <label>Where did you find this quote? (e.g. book name)</label>
+                    <br>
+                    <input type="text" name="find-quote" id="find-quote"> 
+                    <br>
+                    <label>Provide the URL of the quote source, if available.</label>
+                    <br>
+                    <input type="url" name="quote-source" id="quote-source">
+                    <br>
 
+                    <input class="killme" type="submit" value="Submit Quote">
                  </form>
             </div>
 
