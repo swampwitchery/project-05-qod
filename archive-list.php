@@ -19,7 +19,7 @@ get_header(); ?>
 			<div class="quote-authors">
                 <h2>Quote Authors</h2>
                 <ul>
-                    <?php $posts = get_posts( array('posts_per_page' => -1, 'post_type' => 'post') ); ?>
+                <?php $posts = get_posts( array('posts_per_page' => -1, 'post_type' => 'post') ); ?>
                     <?php foreach ( $posts as $post ) :  setup_postdata( $post ); ?>
                     <li>
                         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
@@ -40,7 +40,12 @@ get_header(); ?>
             <div class="tags-area">
                 <h2>Tags</h2>
                 <ul>
-
+               <?php $tags = get_tags( array('orderby' => 'title', 'order' => 'ASC') ); ?>
+                    <?php foreach ( $tags as $tag ) :  setup_postdata( $tag ); ?>
+                    <li>
+                        <a href="<?php echo get_tag_link($tag->term_id)?>"><?php echo $tag->slug ?></a>
+                    </li>
+                    <?php endforeach; wp_reset_postdata(); ?>
                 </ul>
             </div>
 

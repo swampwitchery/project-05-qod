@@ -23,7 +23,7 @@
 			<header id="masthead" class="site-header" role="banner">
 				<div class="site-branding">
 					<div class="logo-image">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?><img src=<?php echo get_template_directory_uri() . '/qod/assets/qod-logo.svg'?>></a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src=<?php echo get_template_directory_uri() . '/qod/assets/qod-logo.svg'?>></a>
 					</div>
 				</div><!-- .site-branding -->
 			</header><!-- #masthead -->
