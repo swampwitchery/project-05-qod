@@ -15,11 +15,11 @@
 
 	<?php wp_head(); ?>
 	</head>
-
+	
+<div class="site-container">
 	<body <?php body_class(); ?>>
 		<div id="page" class="hfeed site">
 			<a class="skip-link screen-reader-text" href="#content"><?php echo esc_html( 'Skip to content' ); ?></a>
-		<div class="site-container">
 			<header id="masthead" class="site-header" role="banner">
 				<div class="site-branding">
 					<div class="logo-image">
@@ -31,3 +31,5 @@
 
 
 			<div id="content" class="site-content">
+			<i class="fas fa-quote-left"></i>
+

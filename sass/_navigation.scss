@@ -150,8 +150,16 @@ a {
 
 
 @media (min-width: $desktop-width) {
-	.main-navigation{
+	.main-navigation,
+	.main-navigation p{
 		display: flex;
 		justify-content: flex-end;
 	}
+}
+
+
+.main-navigation,
+.main-navigation p{
+	display: flex;
+	flex-wrap: wrap;
 }

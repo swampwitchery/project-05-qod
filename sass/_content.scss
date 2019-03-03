@@ -52,19 +52,26 @@ body{
 	padding: 1rem;
 }
 
-.site-main{
+.site-content{
 	i{
-		display: none;
+		//display: none;
 	}
 }
 
 @media (min-width: $desktop-width) {
-	body{
-		text-align: center;
-	}
+
 	.site-container{
-		max-width: 1080px;
 		margin: 0 auto;
+		max-width: 1080px;
+		padding: 3.5rem;
+	}
+	.entry-content p {
+		font-size: 2rem;
+	}
+
+	.site-content::before{
+		position: absolute;
 	}
 }
+
 

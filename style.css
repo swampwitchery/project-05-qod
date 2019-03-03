@@ -531,13 +531,22 @@ a {
   margin: 2rem 0; }
 
 @media (min-width: 1080px) {
-  .main-navigation {
+  .main-navigation,
+  .main-navigation p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end; } }
+
+.main-navigation,
+.main-navigation p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -604,9 +613,11 @@ a {
     width: 500px; } }
 
 @media (min-width: 1080px) {
-  .logo-image img {
-    width: 700px;
-    margin: 0 auto; } }
+  .logo-image {
+    text-align: center; }
+    .logo-image img {
+      width: 700px;
+      margin: 0 auto; } }
 
 /*--------------------------------------------------------------
 # Content
@@ -650,15 +661,15 @@ body {
 .admin-bar {
   padding: 1rem; }
 
-.site-main i {
-  display: none; }
-
 @media (min-width: 1080px) {
-  body {
-    text-align: center; }
   .site-container {
+    margin: 0 auto;
     max-width: 1080px;
-    margin: 0 auto; } }
+    padding: 3.5rem; }
+  .entry-content p {
+    font-size: 2rem; }
+  .site-content::before {
+    position: absolute; } }
 
 /*--------------------------------------------------------------
 # Media
@@ -681,4 +692,27 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* All Archives Page */
+.page-template {
+  margin: 1rem; }
+  @media (min-width: 620px) {
+    .page-template .quote-authors ul,
+    .page-template .categories-area ul,
+    .page-template .tags-area ul {
+      font-size: 1.25rem; } }
+  .page-template .quote-authors ul,
+  .page-template .categories-area ul,
+  .page-template .tags-area ul {
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .page-template .quote-authors ul li,
+    .page-template .categories-area ul li,
+    .page-template .tags-area ul li {
+      padding: 0.25rem; }
+
 /* Submit a Quote Page */

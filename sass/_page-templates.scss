@@ -4,4 +4,31 @@
 
 /* All Archives Page */
 
+.page-template{
+    margin: 1rem;
+
+    .quote-authors,
+    .categories-area,
+    .tags-area{
+        @media (min-width: $tablet-width) {
+            ul{
+            font-size: 1.25rem;
+            }
+        }
+        ul{
+            padding-left: 0;
+            margin-left: 0;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            li{
+                padding: 0.25rem;
+            }
+        }
+    }
+
+    
+}
+
+
 /* Submit a Quote Page */

@@ -9,8 +9,11 @@
 }
 
 @media (min-width: $desktop-width) {
-	.logo-image img{
+    .logo-image {
+        text-align: center;
+    img{
 	width: 700px;
 	margin: 0 auto;
-	}
+    }
+}
 }
