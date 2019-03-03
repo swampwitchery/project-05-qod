@@ -69,8 +69,8 @@ function qod_scripts() {
 	   'rest_url' => esc_url_raw( rest_url() ),
 	   'wpapi_nonce' => wp_create_nonce( 'wp_rest' ),
 	   'post_id' => get_the_ID(),
-	   'success' => '<p>Thanks, your quote submission was received!</p>',
-		'failure' => '<p>Your submission could not be processed.</p>',
+	   'worked' => '<p>Thanks, your quote submission was received!</p>',
+	   'failed' => '<p>Your submission could not be processed.</p>',
   ) );
 }
 add_action( 'wp_enqueue_scripts', 'qod_scripts' );

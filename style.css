@@ -229,7 +229,7 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
+  color: #fff;
   font-family: Exo Web, sans-serif;
   font-size: 1rem;
   line-height: 1.5; }
@@ -320,7 +320,7 @@ html {
           box-sizing: inherit; }
 
 body {
-  background: #fff;
+  background: #222222;
   /* Fallback for when there is no custom background color defined. */ }
 
 blockquote,
@@ -530,6 +530,15 @@ a {
 .site-branding {
   margin: 2rem 0; }
 
+@media (min-width: 1080px) {
+  .main-navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; } }
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -587,6 +596,18 @@ a {
   content: "";
   display: table; }
 
+.logo-image img {
+  width: 300px; }
+
+@media (min-width: 620px) {
+  .logo-image img {
+    width: 500px; } }
+
+@media (min-width: 1080px) {
+  .logo-image img {
+    width: 700px;
+    margin: 0 auto; } }
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -629,11 +650,15 @@ body {
 .admin-bar {
   padding: 1rem; }
 
-.logo-image {
-  width: 300px; }
-
 .site-main i {
   display: none; }
+
+@media (min-width: 1080px) {
+  body {
+    text-align: center; }
+  .site-container {
+    max-width: 1080px;
+    margin: 0 auto; } }
 
 /*--------------------------------------------------------------
 # Media

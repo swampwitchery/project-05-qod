@@ -139,7 +139,6 @@ a {
 }
 
 
-
 .site-info{
 	display: flex;
 	flex-wrap: wrap;
@@ -149,3 +148,10 @@ a {
 	margin: 2rem 0;
 }
 
+
+@media (min-width: $desktop-width) {
+	.main-navigation{
+		display: flex;
+		justify-content: flex-end;
+	}
+}

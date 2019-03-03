@@ -48,9 +48,9 @@
             xhr.setRequestHeader( 'X-WP-Nonce', qod_vars.wpapi_nonce );
          }
       }).done( function() {
-         $('#submit-area').html(qod_vars.success)
+         $('#submit-area').html(qod_vars.worked)
       }).fail( function() {
-         $('#submit-area').html(qod_vars.failure)
+         $('#submit-area').html(qod_vars.failed)
       });
    });
  })( jQuery );

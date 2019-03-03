@@ -46,10 +46,13 @@ function qod_quotations( $query )
 	{
         if(is_admin() ||  !$query->is_main_query()){return;}
         if ( is_home() ){
-    $query->set( 'posts_per_page', 1 );
-    $query->set('orderby', 'rand');
+        $query->set( 'posts_per_page', 1 );
+        $query->set('orderby', 'rand');
     return;
         }
+         if(is_category() || is_tag()) {
+         $query->set( 'posts_per_page', 5 );
+    }
 }
 add_action( 'pre_get_posts', 'qod_quotations', 1 );
 

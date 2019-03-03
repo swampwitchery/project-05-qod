@@ -42,8 +42,8 @@
 }
 
 body{
-	background-color: #222222;
-	color: #fff;
+	background-color: $color__background-body;
+	color: $color__text-main;
 	font-family: $font__main;
 	font-size: 16px;
 }
@@ -52,16 +52,19 @@ body{
 	padding: 1rem;
 }
 
-.logo-image{
-	width: 300px;
-}
-
 .site-main{
 	i{
 		display: none;
 	}
 }
 
-
-
+@media (min-width: $desktop-width) {
+	body{
+		text-align: center;
+	}
+	.site-container{
+		max-width: 1080px;
+		margin: 0 auto;
+	}
+}
 
