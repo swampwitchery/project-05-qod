@@ -24,6 +24,8 @@
         $('.entry-content').html(response[0].content.rendered);
         $('.author-title').html(response[0].title.rendered);
         $('.entry-source').html(response[0]._qod_quote_source.rendered);
+        $('.author-url').html(response[0]._qod_quote_source_url.rendered);
+
 
         const url = qod_vars.home_url + '/' + response[0].slug + '/';
 

@@ -48,12 +48,17 @@ function qod_quotations( $query )
         if ( is_home() ){
         $query->set( 'posts_per_page', 1 );
         $query->set('orderby', 'rand');
-    return;
+        return;
+    }
+     if(is_category() || is_tag()) {
+     $query->set( 'posts_per_page', 5 );
+     return;
         }
-         if(is_category() || is_tag()) {
-         $query->set( 'posts_per_page', 5 );
+         if(is_search()) {
+         $query->set( 'posts_per_page', 10 );
     }
 }
 add_action( 'pre_get_posts', 'qod_quotations', 1 );
+
 
 

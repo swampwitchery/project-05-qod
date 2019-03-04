@@ -31,5 +31,4 @@
 
 
 			<div id="content" class="site-content">
-			<i class="fas fa-quote-left"></i>
 

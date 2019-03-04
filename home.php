@@ -36,6 +36,5 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-	<i class="fas fa-quote-right"></i>
 
 <?php get_footer(); ?>

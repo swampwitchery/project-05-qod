@@ -219,9 +219,6 @@ th {
   padding: 0; }
 
 /*--------------------------------------------------------------
-# Embedded Fonts
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
 body,
@@ -645,9 +642,11 @@ a {
   clear: both;
   margin: 0 0 1.5rem; }
 
-.entry-content,
+.entry-content {
+  font-size: 1.80rem; }
+
 .author-title {
-  font-size: 1.25rem; }
+  font-size: 1.30rem; }
 
 .type-post {
   margin-bottom: 2.5rem; }
@@ -670,6 +669,33 @@ body {
     font-size: 2rem; }
   .site-content::before {
     position: absolute; } }
+
+fieldset {
+  border: none;
+  color: #00cc00; }
+  fieldset button {
+    border: none;
+    padding-left: 1rem;
+    padding-right: 1rem; }
+  fieldset i {
+    font-family: FontAwesome;
+    font-size: 1.25rem;
+    font-style: normal; }
+
+.site-container {
+  max-width: 1080px;
+  padding: 3rem;
+  width: auto; }
+
+.archive h1,
+.tag h1 {
+  border-bottom: 1px dashed #fff;
+  padding-bottom: 1.5rem; }
+
+.archive .type-post,
+.tag .type-post {
+  border-bottom: 1px dashed #ffffff;
+  padding-bottom: 1.5rem; }
 
 /*--------------------------------------------------------------
 # Media
@@ -713,6 +739,24 @@ object {
     .page-template .quote-authors ul li,
     .page-template .categories-area ul li,
     .page-template .tags-area ul li {
-      padding: 0.25rem; }
+      padding: 0.60rem; }
+
+@media (min-width: 1080px) {
+  .site-content {
+    position: relative;
+    margin: 4.5rem 10rem 1.5rem; }
+    .site-content:before, .site-content:after {
+      color: #00cc00;
+      font-family: FontAwesome;
+      font-size: 8rem;
+      line-height: 8rem;
+      position: absolute;
+      top: 0; }
+    .site-content:before {
+      content: '\f10d';
+      left: -160px; }
+    .site-content:after {
+      content: '\f10e';
+      right: -160px; } }
 
 /* Submit a Quote Page */

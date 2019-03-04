@@ -22,13 +22,42 @@
             display: flex;
             flex-wrap: wrap;
             li{
-                padding: 0.25rem;
+                padding: 0.60rem;
             }
         }
     }
 
-    
 }
+ 
+
+ @media (min-width: $desktop-width) {
+ .site-content{ 
+    position:relative;
+    margin: 4.5rem 10rem 1.5rem;
+
+           &:before,
+           &:after {
+               color: $color__link;
+               font-family: FontAwesome;
+               font-size: 8rem;
+               line-height: 8rem;
+               position: absolute;
+               top: 0;
+           }
+
+           &:before {
+               content: '\f10d';
+               left: -160px;
+           }
+       
+           &:after {
+               content: '\f10e';
+               right: -160px;
+    }
+    }
+}
+
+
 
 
 /* Submit a Quote Page */

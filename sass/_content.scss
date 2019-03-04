@@ -32,9 +32,11 @@
 	margin: 0 0 $base__space-unit;
 }
 
-.entry-content,
-.author-title {
-	font-size: 1.25rem;
+.entry-content{
+	font-size: 1.80rem;
+}
+.author-title{
+	font-size: 1.30rem;
 }
 
 .type-post {
@@ -52,11 +54,8 @@ body{
 	padding: 1rem;
 }
 
-.site-content{
-	i{
-		//display: none;
-	}
-}
+
+
 
 @media (min-width: $desktop-width) {
 
@@ -75,3 +74,39 @@ body{
 }
 
 
+fieldset{
+	border: none;
+	color: $color__link;
+
+	button{
+	border:none;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	}
+
+	i{
+		font-family: FontAwesome;
+		font-size: 1.25rem;
+		font-style: normal;
+	}
+}
+
+.site-container{
+    max-width: 1080px;
+    padding: 3rem;
+    width: auto;
+}
+
+.archive,
+.tag{
+
+h1{
+	border-bottom: 1px dashed #fff;
+	padding-bottom: 1.5rem;
+}
+
+.type-post{
+	border-bottom: 1px dashed #ffffff;
+	padding-bottom: 1.5rem;
+}
+}

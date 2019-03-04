@@ -56,7 +56,7 @@ add_filter( 'stylesheet_uri', 'qod_minified_css', 10, 2 );
  * Enqueue scripts and styles.
  */
 function qod_scripts() {
-	wp_enqueue_style( 'font-awesome-cdn', 'https://use.fontawesome.com/releases/v5.7.2/css/all.css', array(), '5.7.2');
+	wp_enqueue_style('font-awesome-cdn','https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css?ver=4.4.0',array(),'4.4.0');
 	wp_enqueue_style( 'qod-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'qod-starter-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true );
@@ -69,8 +69,8 @@ function qod_scripts() {
 	   'rest_url' => esc_url_raw( rest_url() ),
 	   'wpapi_nonce' => wp_create_nonce( 'wp_rest' ),
 	   'post_id' => get_the_ID(),
-	   'worked' => '<p>Thanks, your quote submission was received!</p>',
-	   'failed' => '<p>Your submission could not be processed.</p>',
+	   'worked' => '<p>Quote has been submitted. Thanks for your time!</p>',
+	   'failed' => '<p>Mistakes were made, try again.</p>',
   ) );
 }
 add_action( 'wp_enqueue_scripts', 'qod_scripts' );
