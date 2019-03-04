@@ -13,15 +13,24 @@
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-content -->
 
-	<div class="author-title">
-		- <?php the_title(); ?>
-	</div>
+	<?php
+	$source=get_post_meta(get_the_ID(),'_qod_quote_source',TRUE);
+	$source_url=get_post_meta(get_the_ID(),'_qod_quote_source_url',TRUE);
+	?>
 
-	<div class="entry-title">
+	<div class="entry-info	">
+		<p class="author-title">
+			&mdash; <?php the_title(); ?>
+		</p>
+		<?php if($source && $source_url): ?>
+			
+			<span class="entry-source">&comma; <a href=<?php echo $source_url ?>><?php echo $source ?></a></span>
+		<?php elseif($source): ?>
+		<span class="entry-source">&comma; <?php echo $source ?></span>
+		<?php endif; ?>
 		
 	</div>
 
-	<header class="entry-header">
 
-	</header><!-- .entry-header -->
+
 </article><!-- #post-## -->

@@ -54,10 +54,12 @@ body{
 	padding: 1rem;
 }
 
-
-
-
 @media (min-width: $desktop-width) {
+
+	#show-another{
+		display: block;
+		margin: 0 auto;
+	}
 
 	.site-container{
 		margin: 0 auto;

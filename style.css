@@ -661,6 +661,9 @@ body {
   padding: 1rem; }
 
 @media (min-width: 1080px) {
+  #show-another {
+    display: block;
+    margin: 0 auto; }
   .site-container {
     margin: 0 auto;
     max-width: 1080px;
@@ -758,5 +761,3 @@ object {
     .site-content:after {
       content: '\f10e';
       right: -160px; } }
-
-/* Submit a Quote Page */

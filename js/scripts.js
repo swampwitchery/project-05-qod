@@ -22,15 +22,23 @@
           }
        }).done( function(response) {
         $('.entry-content').html(response[0].content.rendered);
-        $('.author-title').html(response[0].title.rendered);
-        $('.entry-source').html(response[0]._qod_quote_source.rendered);
-
+         $('.entry-info').html(response[0].title.rendered+entrySource(response[0]));
 
         const url = qod_vars.home_url + '/' + response[0].slug + '/';
 
         history.pushState(null, null, url);
        });
     });
+
+function entrySource(data){
+   let entrySource='';
+   if(data._qod_quote_source && data._qod_quote_source_url){
+      entrySource='<span class="entry-source">&comma; <a href='+ data._qod_quote_source_url +'>'+ data._qod_quote_source +'</a></span>';
+   }else if(data._qod_quote_source){
+	entrySource='<span class="entry-source">&comma; ' + data._qod_quote_source + '</span>';
+   }
+   return entrySource;
+}
 
     $('#submit-form').on('submit', function(event) {
       event.preventDefault();
